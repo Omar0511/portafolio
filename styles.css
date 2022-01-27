@@ -21,7 +21,7 @@
 
     --max-width: 1200px;
 
-    --header-height: 4rem;
+    --header-height: 6rem;
 }
 
 /*  Reset */
@@ -98,8 +98,49 @@ p{
 /* Componentes */
 
 /* Menu */
+
+.menu-btn{
+    outline: thin solid var(--first-color);
+    border: none;
+    cursor: pointer;
+    background-color: var(--second-color);
+}
+
+.menu-btn svg{
+    fill: var(--first-color);
+}
+
 .menu{
-    display: none;
+    position: fixed;
+    left: 0;
+    bottom: var(--header-height);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--second-color);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5 ease;
+}
+
+.menu.is-active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.menu a{
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: var(--first-color);
+}
+
+.menu a:hover{
+    color: var(--white-color);
+    background-color: var(--first-color);
 }
 
 /* Utilities */
