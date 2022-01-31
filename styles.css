@@ -95,7 +95,11 @@ p {
 @keyframes carousel-slide {
   0% {
     transform: translateX(0%);
-  }
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+}
 
   25% {
     transform: translateX(-25%);
@@ -115,7 +119,7 @@ p {
   padding: 2rem 0;
   max-width: 800px;
   text-align: center;
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: var(--carousel-bg-color);
 }
 
